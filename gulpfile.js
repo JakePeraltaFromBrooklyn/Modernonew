@@ -9,7 +9,7 @@ let gulp = require('gulp'),
 
 
 gulp.task('sass', function(){
-  return gulp.src('app/sass/style.sass')
+  return gulp.src('app/sass/**/*.sass')
     .pipe(sass({outputStyle:'compressed'}))
     .pipe(rename({suffix : '.min'}))
     .pipe(autoprefixer({
@@ -59,7 +59,7 @@ gulp.task('browser-sync', function(){
 });
 
 gulp.task('watch', function(){
-  gulp.watch('app/sass/style.sass', gulp.parallel('sass'));
+  gulp.watch('app/sass/**/*.sass', gulp.parallel('sass'));
   gulp.watch('app/*.html', gulp.parallel('html'));
   gulp.watch('app/*.js', gulp.parallel('js'));
 });
