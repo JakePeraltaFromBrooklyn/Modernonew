@@ -2,7 +2,6 @@
 @import global
 body
   color: $text
-  background-color: $grey
 .header__top-inner
   display: flex
   justify-content: space-between
@@ -90,6 +89,7 @@ body
 //start products
 .products
   padding: 110px 0
+  background-color: $grey
 .products__inner-btn
   text-align: center
   margin-bottom: 60px
@@ -153,6 +153,10 @@ body
     span
       font-size: 14px
       font-weight: 500
+  &-star
+    font-size: 12px
+    span
+      color: $bg
 .avatar
   width: 30px
   height: 30px
@@ -176,5 +180,27 @@ body
       background-color: $red
       color: #fff
 
+//end products
+//start product-slider
+.product-slider
+  padding: 110px 0px 120px 
+  .slick-dots
+    text-align: center
+    margin-top: 50px
+    li
+      display: inline-block
+      margin-left: 3px
+      margin-right: 3px
+      &.slick-active
+        button
+          background-color: $green
+      button
+        border-radius: 50%
+        background-color: rgb(232, 232, 232,)
+        border: none
+        font-size: 0
+        width: 16px
+        height: 16px
+        cursor: pointer
 
 
