@@ -51,12 +51,12 @@ body
   &-title
     margin-bottom: 10px
     font-size: 48px
-    font-weight: 700
+    @include f700
     line-height: 72px
   &-text
     margin-bottom: 50px
     font-size: 20px
-    font-weight: 500
+    @include f500
     line-height: 30px
   &-form
     max-width: 670px
@@ -70,7 +70,7 @@ body
       height: 56px
       border: none
       font-size: 14px
-      font-weight: 500
+      @include f500
       padding-left: 25px
       padding-right: 60px
       outline: none
@@ -78,7 +78,7 @@ body
         border: 3px solid #434449af
       &::placeholder
         color: #90a4ae
-        font-weight: 500
+        @include f500
     button
       position: absolute
       border: none
@@ -125,7 +125,7 @@ body
     padding: 10px 30px
     align-items: center
     min-height: 90px
-    font-weight: 500
+    @include f500
     border-bottom: 1px solid #e7ecf2
   &-name
     max-width: 310px
@@ -140,7 +140,7 @@ body
   &-price
     font-size: 20px
     color: $bg 
-    font-weight: 700
+    @include f700
   &-info
     display: flex
     justify-content: space-between
@@ -152,7 +152,7 @@ body
     align-items: center
     span
       font-size: 14px
-      font-weight: 500
+      @include f500
   &-star
     font-size: 12px
     span
@@ -202,5 +202,53 @@ body
         width: 16px
         height: 16px
         cursor: pointer
-
-
+//end product-slider
+//start advantages
+.advantages
+  background-color: $bg
+  padding: 110px 0
+.advantages__title
+  color: #fff
+.advantages__inner
+  display: flex
+  justify-content: space-between
+.advantages__item
+  max-width: 370px
+  text-align: center
+  padding: 0 15px
+  cursor: pointer
+  &:hover
+    .advantages__item-images
+      background-color: $green
+      transition: .5s
+      svg
+        fill: #fff
+        transition: .5s
+    .advantages__item-title
+      color: $green
+      transition: .5s
+  &-images
+    width: 114px
+    height: 114px
+    background-color: #fff
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 0 auto 30px
+  &-title
+    margin-bottom: 25px
+    color: #fff
+    @include f500
+    font-size: 24px
+  &-text
+    font-size: 15px
+.icosvg-1
+  svg
+    width: 50px
+.icosvg-2
+  svg
+    width: 70px
+.icosvg-3
+  svg
+    width: 86px
